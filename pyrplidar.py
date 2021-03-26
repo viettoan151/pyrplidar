@@ -15,9 +15,9 @@ class PyRPlidar:
 
     
 
-    def connect(self, port="/dev/ttyUSB0", baudrate=115200, timeout=3):
+    def connect(self, port="/dev/ttyUSB0", baudrate=115200, timeout=3, dsrdtr=False):
         self.lidar_serial = PyRPlidarSerial()
-        self.lidar_serial.open(port, baudrate, timeout)
+        self.lidar_serial.open(port, baudrate, timeout, dsrdtr)
         print("PyRPlidar Info : device is connected")
 
 
