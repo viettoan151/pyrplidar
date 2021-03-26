@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name = "pyrplidar",
-    version = "0.1.2",
-    author = "Hyun-je",
-    author_email = "bigae2@gmail.com",
+    version = "0.1.2_0.0.1",
+    author = ["Hyun-je", "Toan Truong Viet"],
+    author_email = ["bigae2@gmail.com", "viettoan151"],
     license = "MIT",
     description = "Full-featured python library for Slamtec RPLIDAR series",
     long_description = long_description,
