@@ -1,8 +1,7 @@
 import unittest
 import time
 
-import pyrplidar_protocol
-from pyrplidar_protocol import *
+from pyrplidar.pyrplidar_protocol import *
 
 
 class PyRPlidarProtocolTest(unittest.TestCase):

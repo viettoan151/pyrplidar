@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name = "pyrplidar",
-    version = "0.1.2_0.0.1",
+    version = "0.1.2-0.0.2",
     author = ["Hyun-je", "Toan Truong Viet"],
     author_email = ["bigae2@gmail.com", "viettoan151"],
     license = "MIT",

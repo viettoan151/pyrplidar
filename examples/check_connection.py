@@ -1,4 +1,4 @@
-from pyrplidar import PyRPlidar
+from pyrplidar.pyrplidar import PyRPlidar
 
 
 def check_connection():

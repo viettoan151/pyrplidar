@@ -1,11 +1,9 @@
-from pyrplidar_serial import PyRPlidarSerial
-from pyrplidar_protocol import *
-import pyrplidar_protocol
-
+from pyrplidar.pyrplidar_serial import PyRPlidarSerial
+from pyrplidar.pyrplidar_protocol import *
+from pyrplidar import pyrplidar_protocol
 
 
 class PyRPlidar:
-
     def __init__(self):
         self.lidar_serial = None
         self.measurements = None
@@ -20,14 +18,11 @@ class PyRPlidar:
         self.lidar_serial.open(port, baudrate, timeout, dsrdtr)
         print("PyRPlidar Info : device is connected")
 
-
     def disconnect(self):
         if self.lidar_serial is not None:
             self.lidar_serial.close()
             self.lidar_serial = None
             print("PyRPlidar Info : device is disconnected")
-
-
 
     def send_command(self, cmd, payload=None):
         if self.lidar_serial == None:
@@ -54,8 +49,6 @@ class PyRPlidar:
             raise PyRPlidarProtocolError()
         return data
 
-
-
     def stop(self):
         self.send_command(RPLIDAR_CMD_STOP)
 
@@ -65,8 +58,6 @@ class PyRPlidar:
     def set_motor_pwm(self, pwm):
         self.lidar_serial.set_dtr(False)
         self.send_command(RPLIDAR_CMD_SET_MOTOR_PWM, struct.pack("<H", pwm))
-    
-    
 
     def get_info(self):
         self.send_command(RPLIDAR_CMD_GET_INFO)
@@ -164,7 +155,6 @@ class PyRPlidar:
 
         return scan_generator
 
-    
     def force_scan(self):
         self.send_command(RPLIDAR_CMD_FORCE_SCAN)
         discriptor = self.receive_discriptor()

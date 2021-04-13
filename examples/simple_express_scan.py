@@ -1,4 +1,4 @@
-from pyrplidar import PyRPlidar
+from pyrplidar.pyrplidar import PyRPlidar
 import time
 
 def simple_express_scan():

@@ -2,7 +2,6 @@ import serial
 
 
 class PyRPlidarSerial:
-    
     def __init__(self):
         self._serial = None
 
