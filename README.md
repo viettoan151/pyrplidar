@@ -51,6 +51,6 @@ lidar.disconnect()
 This library implement full specifications on the [protocol documentation](http://bucket.download.slamtec.com/ccb3c2fc1e66bb00bd4370e208b670217c8b55fa/LR001_SLAMTEC_rplidar_protocol_v2.1_en.pdf) of Slamtec.
 
 ## Version logs
-0.1.2 Original code from Hyun-je
+0.1.2 Original code from Hyun-je <br/>
 0.1.2_0.0.1 Minor fix on disabling dsrdtr flag of serial, that caused the error of unable to read income data on Windows
 
